@@ -41,4 +41,5 @@ COPY scripts/setup.sh /
 RUN chmod +x /setup.sh
 CMD ["/setup.sh"]
 
+CMD ["/bin/rm", "-f", "/var/run/apache2/apache2.pid"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
